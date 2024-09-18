@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <META CHARSET="UTF-8">
+    <title> 여의도 플레이스 </title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .url-preview-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* 링크 스타일 */
+        .url-preview-container a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        /* URL 미리보기 박스 스타일 (기본적으로 숨김) */
+        .url-preview {
+            display: none;
+            position: absolute;
+            top: 120%;
+            left: 0;
+            width: 300px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        /* 링크에 마우스를 올렸을 때 미리보기 박스 표시 */
+        .url-preview-container:hover .url-preview {
+            display: block;
+        }
+
+        .url-preview img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .url-preview h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .url-preview p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <ol class="sub_menu">
+            <li class="menu"><div class="menulabel"><a class="link" href="index.html">여의도 플레이스</a></div></li>
+            <li class="menu"><div class="menulabel"><a class="link" href="asian.html">아시안</a></div></li>
+            <li class="menu"><div class="menulabel"><a class="link" href="soup.html">국</a></div></li>
+            <li class="menu"><div class="menulabel"><a class="link" href="meat.html">고기</a></div></li>
+            <li class="menu"><div class="menulabel"><a class="link" href="sea.html">해산물</a></div></li>
+            <li class="menu"><div class="menulabel"><a class="link" href="noodle.html">면</a></div></li>
+            <li class="menu"><div class="menulabel"><a class="link" href="daily.html">데일리런치</a></div></li>
+            <li class="menu"><div class="menulabel"><a class="link" href="cafeteria.html">구내식당</a></div></li>
+        </ol>
+    </div>
+    <div class="url-preview-container">
+        <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">여의도미희</a>
+        <div class="url-preview">
+            <img src="https://m.place.naver.com/restaurant/1871644159/home?entry=plt" alt="Preview Image">
+            <h3>여의도 미희</h3>
+            <p>aaaaa</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.title{
+    background-color:white;
+
+}
+.menu{
+    display: inline-block;
+    font-size : 20px;
+
+}
+.sub_menu{
+    text-align : center;
+}
+.link{
+    text-decoration :none;
+    color : black;
+    border-right: 1px solid gray;
+}
+.box {
+    padding : 20px;
+    color: black;
+
+}
+.store {
+    text-decoration: none;
+    color: blue;
+
+}
+.art {
+    border: 5px solid pink;
+    width : 100%;
+    object-fit :cover;
+}
+
+@media screen and (min-width: 1024px) {
+    .menu{
+        font-size : 30px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .menu{
+        font-size : 15px;
+    }
+    .footerBox1 {
+
+    }
+    .footerBox2 {
+
+    }
+}
