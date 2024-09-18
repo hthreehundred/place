@@ -5,33 +5,35 @@ body {
     margin: 20px;
 }
 .title{
-    background-color:white;
+    width : 100%;
 
-}
-.menu{
-    display: inline-block;
-    font-size : 20px;
-
-
-}
-.sub_menu{
-    text-align : center;
 }
 .link{
+    display: inline-block
     text-decoration :none;
     color : black;
     border-right: 1px solid gray;
-    padding: 5px;
+}
+.sub_menu{
+
 }
 .box {
-    padding : 10px;
+
+    margin : 5px;
     color: black;
+
 
 }
 .store {
+    padding : 5px;
     text-decoration: none;
     color: blue;
 
+}
+.image {
+    position : absolute;
+    left : 65%;
+    background: orange;
 }
 .art {
     border: 5px solid pink;
@@ -41,12 +43,12 @@ body {
 
 @media screen and (min-width: 1024px) {
     .menu{
-        font-size : 30px;
+
     }
 }
 @media screen and (max-width: 650px) {
     .menu{
-        font-size : 20px;
+
     }
     .footerBox1 {
 
