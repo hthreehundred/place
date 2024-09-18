@@ -2,48 +2,41 @@
     box-sizing: border-box;
 }
 body {
-    margin: 20px;
 }
 .title{
     width : 100%;
-
 }
 .link{
-    display: inline-block
     text-decoration :none;
     color : black;
     border-right: 1px solid gray;
 }
 .sub_menu{
-
 }
-.box {
-
+.list {
     margin : 5px;
     color: black;
-
-
-}
-.store {
-    padding : 5px;
-    text-decoration: none;
-    color: blue;
-
 }
 .image {
-    position : absolute;
-    left : 65%;
+    display : flex;
+    margin-left: auto;
     background: orange;
+    align-items: center;
 }
-.art {
+.box {
+    display : inline-flex;
     border: 5px solid pink;
     width : 100%;
     object-fit :cover;
+    margin : 5px;
+
+}
+.left{
+
 }
 
 @media screen and (min-width: 1024px) {
     .menu{
-
     }
 }
 @media screen and (max-width: 650px) {
