@@ -11,32 +11,59 @@
     </style>
 </head>
 <body>
-<div class="title">
-    <a class="link" href="index.html">여의도 플레이스</a>
-    <a class="link" href="asian.html">아시안</a>
-    <a class="link" href="soup.html">국</a>
-    <a class="link" href="meat.html">고기</a>
-    <a class="link" href="sea.html">해산물</a>
-    <a class="link" href="noodle.html">면</a>
-    <a class="link" href="daily.html">데일리런치</a>
-    <a class="link" href="cafeteria.html">구내식당</a>
-</div>
-<div class="list">
-    <article class="box">
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="온기">
-    </article>
-    <article class="box">
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">일미집</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="일미집">
-    </article>
-    <article class="box">
+    <script>
+            function addParameter(param, value){
+
+                const url = new URL(window.location.href);
+
+                url.searchParams.set(param, value);
+
+                window.location.href = url;
+
+                const params = new URLSearchParams(window.location.search);
+
+                const name = params.get('name');
+
+
+                if (name) {
+                    const element = document.querySelector('.list');
+                    element.style.display = 'block';
+                }
+
+        }
+
+    </script>
+
+
+
+    <div class="title">
+        <a class="link" href="index.html">여의도 플레이스</a>
+        <a class="link" href="/asian">아시안</a>
+        <a class="link" onclick="addParameter('name', 'soup')">국</a>
+        <a class="link" href="meat.html">고기</a>
+        <a class="link" href="sea.html">해산물</a>
+        <a class="link" href="noodle.html">면</a>
+        <a class="link" href="daily.html">데일리런치</a>
+        <a class="link" href="cafeteria.html">구내식당</a>
+    </div>
+    <div class="list">
+
+            <article class="box">
+                <div class="left">
+                    <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
+                    <div class="storeInfo">가정식</div>
+                </div>
+                <img class="image" src="images/테스트이미지.jpg" alt="온기">
+            </article>
+            <article class="box">
+                <div class="left">
+                    <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">일미집</a></div>
+                    <div class="storeInfo">가정식</div>
+                </div>
+                <img class="image" src="images/테스트이미지.jpg" alt="일미집">
+            </article>
+
+    <article class="box" >
         <div class="left">
             <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
             <div class="storeInfo">가정식</div>
@@ -78,6 +105,6 @@
         </div>
         <img class="image" src="images/테스트이미지.jpg" alt="청식당">
     </article>
-</div>
+    </div>
 </body>
 </html>
