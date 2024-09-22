@@ -5,35 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title> 여의도 플레이스 </title>
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="scripts/script.js" defer></script>
     <style>
 
     </style>
 </head>
 <body>
-    <script>
-            function addParameter(param, value){
-
-                const url = new URL(window.location.href);
-
-                url.searchParams.set(param, value);
-
-                window.location.href = url;
-
-                const params = new URLSearchParams(window.location.search);
-
-                const name = params.get('name');
-
-
-                if (name) {
-                    const element = document.querySelector('.list');
-                    element.style.display = 'block';
-                }
-
-        }
-
-    </script>
-
 
 
     <div class="title">
