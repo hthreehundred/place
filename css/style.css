@@ -1,73 +1,77 @@
-*{
+{
     box-sizing: border-box;
 }
 body {
+}
 
-}
 .title{
-    width : 100%;
+    width: 100%;
 }
+
 .link{
-    text-decoration :none;
-    color : black;
+    text-decoration: none;
+    color: black;
     border-right: 1px solid gray;
-    padding : 2px;
-}
-.sub_menu{
-}
-.list {
-    display : none;
+    padding: 2px;
 }
 
 .image {
-    background: orange;
-    height : 100px;
-    width : 150px;
+    background-color: orange;
+    height: 100px;
+    width: 150px;
 }
+
 .box {
-    display : flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
-    width : 100%;
-    object-fit :cover;
-    margin-bottom : 5px;
-
-
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
 }
+
 .detail{
-    text-align : center;
-    height : 100px;
-    width : 150px;
-    background: lightblue;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    background-color: lightblue;
 }
+
 .storeName{
     font-size: 20px;
-    font-color :black;
+    color: black;
     font-weight: bold;
+}
+
+.list{
+    display: none;
 }
 a{
     text-decoration: none;
 }
+
 div {
   border-radius: 5px;
 }
+
 img {
   border-radius: 5px;
 }
+
 @media screen and (min-width: 1024px) {
+
     .menu{
     }
 }
 @media screen and (max-width: 650px) {
     .menu{
-
     }
+
     .footerBox1 {
-
     }
-    .footerBox2 {
 
+    .footerBox2 {
     }
 }
