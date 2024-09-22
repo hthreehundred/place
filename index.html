@@ -86,17 +86,18 @@
         function addParameter(param, value){
             init();
             const url = new URL(window.location.href);
-            const params = new URLSearchParams(window.location.search);
+            const params = url.searchParams;
+            //const params = new URLSearchParams(window.location.search);
+            url.searchParams.set(param, value);
             const name = params.get('name');
 
-            url.searchParams.set(param, value);
-            window.location.href = url;
+            history.replaceState(null,'',url);
 
             event.preventDefault();
 
-            if (name === 'soup') {
+            if (name == 'soup') {
                 applySoup(event);
-            }else if (name === 'asian') {
+            }else if (name == 'asian') {
                 applyAsian(event);
             }
         }
