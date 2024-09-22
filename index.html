@@ -5,26 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title> 여의도 플레이스 </title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/script.js" defer></script>
+
     <style>
+         .clicked {
+
+
+         }
+
 
     </style>
+
+
+
+
 </head>
 <body>
-
+    <script>
+        function applyAsian(event) {
+            init();
+            event.preventDefault();
+            var link = document.getElementById('asianLink');
+            console.log(link);
+             if (link) {
+                document.querySelector('.asian').style.display = 'block';
+            }
+        }
+        function applySoup(event) {
+            init();
+            event.preventDefault();
+            var link = document.getElementById('soupLink');
+            console.log(link);
+             if (link) {
+                document.querySelector('.soup').style.display = 'block';
+            }
+        }
+        function init(){
+            document.querySelector('.soup').style.display = 'none';
+            document.querySelector('.asian').style.display = 'none';
+        }
+    </script>
 
     <div class="title">
         <a class="link" href="index.html">여의도 플레이스</a>
-        <a class="link" href="/asian">아시안</a>
-        <a class="link" onclick="addParameter('name', 'soup')">국</a>
+        <a class="link" href="#" id="asianLink" onclick="applyAsian(event)">아시안</a>
+        <a class="link" href="#" id="soupLink" onclick="applySoup(event)">국</a>
         <a class="link" href="meat.html">고기</a>
         <a class="link" href="sea.html">해산물</a>
         <a class="link" href="noodle.html">면</a>
         <a class="link" href="daily.html">데일리런치</a>
         <a class="link" href="cafeteria.html">구내식당</a>
     </div>
-    <div class="list">
-
+    <div class="asian">
             <article class="box">
                 <div class="left">
                     <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
@@ -39,49 +70,50 @@
                 </div>
                 <img class="image" src="images/테스트이미지.jpg" alt="일미집">
             </article>
-
-    <article class="box" >
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="이화수">
-    </article>
-    <article class="box">
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">마루</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="마루">
-    </article>
-    <article class="box">
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이남장</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="이남장">
-    </article>
-    <article class="box">
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">진순대</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="진순대">
-    </article>
-    <article class="box">
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">북창동순두부</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="북창동순두부">
-    </article>
-    <article class="box">
-        <div class="left">
-            <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">청식당</a></div>
-            <div class="storeInfo">가정식</div>
-        </div>
-        <img class="image" src="images/테스트이미지.jpg" alt="청식당">
-    </article>
+    </div>
+    <div class="soup">
+        <article class="box" >
+            <div class="left">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
+                <div class="storeInfo">가정식</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="이화수">
+        </article>
+        <article class="box">
+            <div class="left">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">마루</a></div>
+                <div class="storeInfo">가정식</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="마루">
+        </article>
+        <article class="box">
+            <div class="left">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이남장</a></div>
+                <div class="storeInfo">가정식</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="이남장">
+        </article>
+        <article class="box">
+            <div class="left">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">진순대</a></div>
+                <div class="storeInfo">가정식</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="진순대">
+        </article>
+        <article class="box">
+            <div class="left">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">북창동순두부</a></div>
+                <div class="storeInfo">가정식</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="북창동순두부">
+        </article>
+        <article class="box">
+            <div class="left">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">청식당</a></div>
+                <div class="storeInfo">가정식</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="청식당">
+        </article>
     </div>
 </body>
 </html>
