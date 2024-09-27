@@ -1,18 +1,27 @@
-{
-    box-sizing: border-box;
-}
-body {
+/* reset 영역 */
+a {
+    text-decoration: none;
 }
 
-.title{
+div {
+    border-radius: 5px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+/* 본문 스타일 영역 */
+.title {
     width: 100%;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: black;
     border-right: 1px solid gray;
     padding: 2px;
+    box-sizing: border-box;
 }
 
 .image {
@@ -30,48 +39,18 @@ body {
     width: 100%;
     object-fit: cover;
     margin-bottom: 5px;
+    box-sizing: border-box;
 }
 
-.detail{
+.detail {
     text-align: center;
     height: 100px;
     width: 150px;
     background-color: lightblue;
 }
 
-.storeName{
+.storeName {
     font-size: 20px;
     color: black;
     font-weight: bold;
-}
-
-.list{
-    display: none;
-}
-a{
-    text-decoration: none;
-}
-
-div {
-  border-radius: 5px;
-}
-
-img {
-  border-radius: 5px;
-}
-
-@media screen and (min-width: 1024px) {
-
-    .menu{
-    }
-}
-@media screen and (max-width: 650px) {
-    .menu{
-    }
-
-    .footerBox1 {
-    }
-
-    .footerBox2 {
-    }
 }

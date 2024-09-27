@@ -8,16 +8,21 @@
 </head>
 <body>
     <div class="title">
-        <a class="link" href="index.html">여의도 플레이스</a>
-        <a class="link" href="#" id="asianLink" onclick="addParameter('name', 'asian',this)">아시안</a>
-        <a class="link" href="#" id="soupLink" onclick="addParameter('name', 'soup',this)">국</a>
-        <a class="link" href="meat.html">고기</a>
-        <a class="link" href="sea.html">해산물</a>
-        <a class="link" href="noodle.html">면</a>
-        <a class="link" href="daily.html">데일리런치</a>
-        <a class="link" href="cafeteria.html">구내식당</a>
+        <a id="index" class="link" href="#" onclick="addParameter('index')">여의도 플레이스</a>
+        <a id="asian" class="link" href="#" onclick="addParameter('asian')">아시안</a>
+        <a id="soup" class="link" href="#" onclick="addParameter('soup')">국</a>
+        <a id="meat" class="link" href="#" onclick="addParameter('meat')">고기</a>
+        <a id="sea" class="link" href="#" onclick="addParameter('sea')">해산물</a>
+        <a id="noodle" class="link" href="#" onclick="addParameter('noodle')">면</a>
+        <a id="daily" class="link" href="#" onclick="addParameter('daily')">데일리런치</a>
+        <a id="cafeteria" class="link" href="#" onclick="addParameter('cafeteria')">구내식당</a>
     </div>
-    <div class="list" id="asian">
+
+    <div class="list" id="content_index">
+        인덱스에용
+    </div>
+    
+    <div class="list" id="content_asian">
         <article class="box">
             <div class="detail">
                 <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
@@ -33,7 +38,8 @@
             <img class="image" src="images/테스트이미지.jpg" alt="일미집">
         </article>
     </div>
-    <div class="list" id="soup">
+
+    <div class="list" id="content_soup">
         <article class="box" >
             <div class="detail">
                 <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
@@ -78,38 +84,86 @@
         </article>
     </div>
 
-    <script>
+    <div class="list" id="content_meat">
+        <article class="box" >
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
+                <div class="storeInfo">고기</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="이화수">
+        </article>
+    </div>
 
-        function addParameter(param, value, element){
+    <div class="list" id="content_sea">
+        <article class="box" >
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
+                <div class="storeInfo">해산물</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="이화수">
+        </article>
+    </div>
+
+    <div class="list" id="content_noodle">
+        <article class="box" >
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
+                <div class="storeInfo">면</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="이화수">
+        </article>
+    </div>
+
+    <div class="list" id="content_daily">
+        <article class="box" >
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
+                <div class="storeInfo">오늘의 정식</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="이화수">
+        </article>
+    </div>
+
+    <div class="list" id="content_cafeteria">
+        <article class="box" >
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
+                <div class="storeInfo">카페테리아</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="이화수">
+        </article>
+    </div>
+
+    <script>
+        function init(){
+            const elements = document.querySelectorAll('.list');
+
+            elements.forEach(item => {
+                item.style.display = 'none';
+            });
+        }
+
+        function addParameter(id){
+            const param = 'name';
             const url = new URL(window.location.href);
             const params = url.searchParams;
-            const name = params.get('name');
+            const name = params.get(param);
 
-            url.searchParams.set(param, value);
-
-            history.replaceState(null,'',url);
             event.preventDefault();
-            applyEvent(element);
+            url.searchParams.set(param, id);
+            history.replaceState(null, '', url);
+            applyEvent(id);
         }
         
-        function applyEvent(element) {
-            init();
-            const id = element.id;
+        function applyEvent(id) {
             var link = document.getElementById(id);
 
-            if (id === 'asianLink') {
-                document.querySelector('#asian').style.display = 'block';
-            }else if (id === 'soupLink') {
-                document.querySelector('#soup').style.display = 'block';
-            }
+            init();
+            document.querySelector(`#content_${id}`).style.display = 'block';
         }
 
-        function init(){
-            document.querySelector('#soup').style.display = 'none';
-            document.querySelector('#asian').style.display = 'none';
-        }
-
+        init();
+        applyEvent('index');
     </script>
-
 </body>
 </html>
