@@ -1,6 +1,3 @@
-body {
-}
-
 div {
   border-radius: 5px;
 }
@@ -53,9 +50,4 @@ img {
     font-size: 20px;
     color: black;
     font-weight: bold;
-}
-
-@media screen and (min-width: 1024px) {
-}
-@media screen and (max-width: 650px) {
 }

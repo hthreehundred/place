@@ -8,16 +8,19 @@
 </head>
 <body>
     <div class="title">
-        <a class="link" href="index.html">여의도 플레이스</a>
-        <a class="link" href="#" id="asianLink" onclick="addParameter('asian')">아시안</a>
-        <a class="link" href="#" id="soupLink" onclick="addParameter('soup')">국</a>
-        <a class="link" href="meat.html">고기</a>
-        <a class="link" href="sea.html">해산물</a>
-        <a class="link" href="noodle.html">면</a>
-        <a class="link" href="daily.html">데일리런치</a>
-        <a class="link" href="cafeteria.html">구내식당</a>
+        <a class="link" href="index.html" id="index">여의도 플레이스</a>
+        <a class="link" href="#" id="asian">아시안</a>
+        <a class="link" href="#" id="soup">국</a>
+        <a class="link" href="#" id="meat">고기</a>
+        <a class="link" href="#" id="sea">해산물</a>
+        <a class="link" href="#" id="noddle">면</a>
+        <a class="link" href="#" id="daily">데일리런치</a>
+        <a class="link" href="#" id="cafeteria">구내식당</a>
     </div>
-    <div class="list" id="asian">
+    <div class="list" id="content_index">
+
+    </div>
+    <div class="list" id="content_asian">
         <article class="box">
             <div class="detail">
                 <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
@@ -33,7 +36,7 @@
             <img class="image" src="images/테스트이미지.jpg" alt="일미집">
         </article>
     </div>
-    <div class="list" id="soup">
+    <div class="list" id="content_soup">
         <article class="box" >
             <div class="detail">
                 <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">이화수</a></div>
@@ -77,8 +80,97 @@
             <img class="image" src="images/테스트이미지.jpg" alt="청식당">
         </article>
     </div>
+    <div class="list" id="content_meat">
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
+                <div class="storeInfo">고기</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="온기">
+        </article>
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">일미집</a></div>
+                <div class="storeInfo">고기1</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="일미집">
+        </article>
+    </div>
+    <div class="list" id="content_sea">
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
+                <div class="storeInfo">해산물</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="온기">
+        </article>
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">일미집</a></div>
+                <div class="storeInfo">해산물1</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="일미집">
+        </article>
+    </div>
+    <div class="list" id="content_noddle">
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
+                <div class="storeInfo">면</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="온기">
+        </article>
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">일미집</a></div>
+                <div class="storeInfo">면1</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="일미집">
+        </article>
+    </div>
+    <div class="list" id="content_daily">
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
+                <div class="storeInfo">데일리</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="온기">
+        </article>
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">일미집</a></div>
+                <div class="storeInfo">데일리1</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="일미집">
+        </article>
+    </div>
+    <div class="list" id="content_cafeteria">
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">온기</a></div>
+                <div class="storeInfo">구내식당</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="온기">
+        </article>
+        <article class="box">
+            <div class="detail">
+                <div class="storeName"> <a href="https://m.place.naver.com/restaurant/1871644159/home?entry=plt">일미집</a></div>
+                <div class="storeInfo">구내식당1</div>
+            </div>
+            <img class="image" src="images/테스트이미지.jpg" alt="일미집">
+        </article>
+    </div>
 
     <script>
+        const aButton = document.querySelectorAll('a');
+        aButton.forEach(aClick => {
+            aClick.addEventListener('click', function(event) {
+                event.preventDefault();
+                const aId = event.target.id;
+                addParameter(aId);
+            });
+        });
+
         function init(){
             const id = document.querySelectorAll('.list');
 
@@ -88,11 +180,10 @@
         }
 
         function addParameter(id){
-
             const param = 'name';
             const url = new URL(window.location.href);
-            url.searchParams.set(param,id);
 
+            url.searchParams.set(param,id);
             history.replaceState(null,'',url);
             event.preventDefault();
             applyEvent(id);
@@ -100,11 +191,8 @@
         
         function applyEvent(id) {
             init();
-            document.querySelector('#'+id).style.display = 'block';
-
+            document.querySelector(`#content_${id}`).style.display = 'block';
         }
-
     </script>
-
 </body>
 </html>
