@@ -88,11 +88,10 @@
         }
 
         function addParameter(id){
-
             const param = 'name';
             const url = new URL(window.location.href);
-            url.searchParams.set(param,id);
 
+            url.searchParams.set(param,id);
             history.replaceState(null,'',url);
             event.preventDefault();
             applyEvent(id);
@@ -101,10 +100,8 @@
         function applyEvent(id) {
             init();
             document.querySelector('#'+id).style.display = 'block';
-
         }
 
     </script>
-
 </body>
 </html>
